@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MISA_CukCuk_Test_API.Models;
 using Dapper;
 using System;
 using System.Collections.Generic;
@@ -7,6 +6,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Data;
 using MySqlConnector;
+using MISA.ApplicationCore;
+using MISA.Infrarstructure.Models;
+using MISA.Entity;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,9 +22,8 @@ namespace MISA_CukCuk_Test_API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var connectionString = "User Id=dev;Host=47.241.69.179;Port=3306;Database='MISACukCuk_Demo';Password=12345678;Character Set=utf8";
-            IDbConnection dbConnection = new MySqlConnection(connectionString);
-            var customers = dbConnection.Query<Customer>("Proc_GetCustomers", commandType: CommandType.StoredProcedure);
+            var customerService = new CustomerService();
+            var customers =  customerService.GetCustomers();
             return Ok(customers);
         }
 
@@ -44,48 +45,15 @@ namespace MISA_CukCuk_Test_API.Controllers
             /// Validate dữ liệu:
             /// check trống mã:
 
-            var customerCode = customer.CustomerCode;
-            if(string.IsNullOrEmpty(customerCode))
-            {
-                var msg = new
-                {
-                    devMsg = new
-                    {
-                        FieldName = "CustomerCode",
-                        msg = "Mã khách hàng không được để trống",
-                        Code = 999,
-                    },
-                };
-                return BadRequest(msg);
-            }
+            var customerService = new CustomerService();
+            var serviceResult = customerService.InsertCustomer(customer);
 
-            //Check trùng mã:
-            var connectionString = "User Id=dev;Host=47.241.69.179;Port=3306;Database='MISACukCuk_Demo';Password=12345678;Character Set=utf8";
-            IDbConnection dbConnection = new MySqlConnection(connectionString);
-            var res = dbConnection.Query   ("Proc_InsertCustomer", new { CustomerCode = customerCode }, commandType: CommandType.StoredProcedure);
-
-            var properties = customer.GetType().GetProperties();
-            var parmaster = new DynamicParameters();
-            foreach(var property in properties)
-            {
-                var propertyName = property.Name;
-                var propertyValue = property.GetValue(customer);
-                var propertyType = property.PropertyType;
-                if(propertyType == typeof(Guid) || propertyType == typeof(Guid?))
-                {
-                    parmaster.Add($"{propertyName}", propertyValue, DbType.String);
-                }
-                else
-                {
-                    parmaster.Add($"{propertyName}", propertyValue);
-                }
-            }
-
-            var connectionString = "User Id=dev;Host=47.241.69.179;Port=3306;Database='MISACukCuk_Demo';Password=12345678;Character Set=utf8";
-            IDbConnection dbConnection = new MySqlConnection(connectionString);
-            var rowAffects = dbConnection.Execute("Proc_InsertCustomer", parmaster, commandType: CommandType.StoredProcedure);
-
-            return Ok(rowAffects);
+            if (serviceResult.MISACode == MISACode.NotValid)
+                return BadRequest(serviceResult.Data);
+            if (serviceResult.MISACode == MISACode.IsValid && (int)serviceResult.Data > 0)
+                return Created("Thành công", customer);
+            else
+                return NoContent();
         }
 
         // PUT api/<CustomerController>/5

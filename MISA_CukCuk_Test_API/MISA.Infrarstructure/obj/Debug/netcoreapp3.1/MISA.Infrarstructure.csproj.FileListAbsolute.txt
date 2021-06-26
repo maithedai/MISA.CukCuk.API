@@ -1,0 +1,12 @@
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Infrarstructure.deps.json
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Infrarstructure.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Infrarstructure.pdb
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csproj.AssemblyReference.cache
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.AssemblyInfoInputs.cache
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.AssemblyInfo.cs
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csproj.CoreCompileInputs.cache
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.pdb
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Entity.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Entity.pdb
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csproj.CopyComplete

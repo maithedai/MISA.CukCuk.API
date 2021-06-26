@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MISA_CukCuk_Test_API.Models
+namespace MISA.Infrarstructure.Models
 {
+    /// <summary>
+    /// Khách hàng
+    /// </summary>
+    /// CreateBy: MTDAI 25.06.2021
     public class Customer
     {
         #region Property
