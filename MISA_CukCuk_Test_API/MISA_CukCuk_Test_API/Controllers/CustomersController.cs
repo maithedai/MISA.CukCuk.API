@@ -41,9 +41,49 @@ namespace MISA_CukCuk_Test_API.Controllers
         [HttpPost]
         public IActionResult Post(Customer customer)
         {
+            /// Validate dữ liệu:
+            /// check trống mã:
+
+            var customerCode = customer.CustomerCode;
+            if(string.IsNullOrEmpty(customerCode))
+            {
+                var msg = new
+                {
+                    devMsg = new
+                    {
+                        FieldName = "CustomerCode",
+                        msg = "Mã khách hàng không được để trống",
+                        Code = 999,
+                    },
+                };
+                return BadRequest(msg);
+            }
+
+            //Check trùng mã:
             var connectionString = "User Id=dev;Host=47.241.69.179;Port=3306;Database='MISACukCuk_Demo';Password=12345678;Character Set=utf8";
             IDbConnection dbConnection = new MySqlConnection(connectionString);
-            var rowAffects = dbConnection.Execute("Proc_InsertCustomer", customer, commandType: CommandType.StoredProcedure);
+            var res = dbConnection.Query   ("Proc_InsertCustomer", new { CustomerCode = customerCode }, commandType: CommandType.StoredProcedure);
+
+            var properties = customer.GetType().GetProperties();
+            var parmaster = new DynamicParameters();
+            foreach(var property in properties)
+            {
+                var propertyName = property.Name;
+                var propertyValue = property.GetValue(customer);
+                var propertyType = property.PropertyType;
+                if(propertyType == typeof(Guid) || propertyType == typeof(Guid?))
+                {
+                    parmaster.Add($"{propertyName}", propertyValue, DbType.String);
+                }
+                else
+                {
+                    parmaster.Add($"{propertyName}", propertyValue);
+                }
+            }
+
+            var connectionString = "User Id=dev;Host=47.241.69.179;Port=3306;Database='MISACukCuk_Demo';Password=12345678;Character Set=utf8";
+            IDbConnection dbConnection = new MySqlConnection(connectionString);
+            var rowAffects = dbConnection.Execute("Proc_InsertCustomer", parmaster, commandType: CommandType.StoredProcedure);
 
             return Ok(rowAffects);
         }

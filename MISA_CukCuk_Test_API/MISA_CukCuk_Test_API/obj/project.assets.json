@@ -267,11 +267,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\mtdai\\API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
+      "projectUniqueName": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
       "projectName": "MISA_CukCuk_Test_API",
-      "projectPath": "E:\\mtdai\\API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
+      "projectPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
       "packagesPath": "C:\\Users\\mtdai\\.nuget\\packages\\",
-      "outputPath": "E:\\mtdai\\API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\obj\\",
+      "outputPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mtdai\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0xzuSo/QF80JT5pr+rETlAMfyJLpKFV4GaiUO+iuUWGlS497IsxsO/KzhQDvnxtHeCz9W6Hj/tvwrUBodpINfA==",
+  "dgSpecHash": "AomkRutagSSL+Ww8UuyvxB14aFjFx3FI/uaCC/1+dIL/bQqIrXXljaz1AafsICry1yt/I+HTSjQVBv3YAXiYMA==",
   "success": true,
-  "projectFilePath": "E:\\mtdai\\API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
+  "projectFilePath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mtdai\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\mtdai\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
