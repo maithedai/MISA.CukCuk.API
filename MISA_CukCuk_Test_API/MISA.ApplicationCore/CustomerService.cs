@@ -1,22 +1,44 @@
 ﻿using MISA.ApplicationCore.Entities;
-using MISA.Entity;
-using MISA.Infrarstructure;
-using MISA.Infrarstructure.Models;
+using MISA.ApplicationCore.Enums;
+using MISA.ApplicationCore.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MISA.ApplicationCore
 {
-    public class CustomerService
+    public class CustomerService: ICustomerService
     {
+        ICustomerRepository _customerRepository;
+
+        #region Constructor
+        public CustomerService(ICustomerRepository customerRepository)
+        {
+            _customerRepository = customerRepository;
+        }
+
+        public ServiceResult Addcustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ServiceResult DeleteCustomer(Guid customerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Customer GetCustomerById(Guid customerId)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
+
         #region Method
 
         // Lấy danh sách khách hàng:
         public IEnumerable<Customer> GetCustomers()
         {
-            var customerContext = new CustomerContext();
-            var customers = customerContext.GetCustomers();
+            var customers = _customerRepository.GetCustomers();
             return customers;
         }
 
@@ -24,7 +46,6 @@ namespace MISA.ApplicationCore
         public ServiceResult InsertCustomer(Customer customer)
         {
             var serviceResult = new ServiceResult();
-            var customerContext = new CustomerContext();
 
             /// Validate dữ liệu:
             /// Check trường bắt buộc nhập, Nếu dữ liệu chưa hợp lệ thì mô tả lỗi
@@ -50,7 +71,7 @@ namespace MISA.ApplicationCore
             }
 
             //Check trùng mã:
-            var res = customerContext.GetCustomerByCode(customerCode);
+            var res = _customerRepository.GetCustomerByCode(customerCode);
             if (res != null)
             {
                 var msg = new
@@ -71,11 +92,41 @@ namespace MISA.ApplicationCore
             }
 
             //Nếu dữ liệu hợp lệ thì thêm mới
-            var rowAffects = customerContext.InsertCustomer(customer);
+            var rowAffects = _customerRepository.AddCustomer(customer);
             serviceResult.MISACode = MISACode.IsValid;
             serviceResult.Messenger = "Thêm thành công";
             serviceResult.Data = rowAffects;
             return serviceResult;
+        }
+
+        public ServiceResult UpdateCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        ServiceResult ICustomerService.AddCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        ServiceResult ICustomerService.DeleteCustomer(Guid customerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        Customer ICustomerService.GetCustomerById(Guid customerId)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<Customer> ICustomerService.GetCustomers()
+        {
+            throw new NotImplementedException();
+        }
+
+        ServiceResult ICustomerService.UpdateCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
         }
 
         //Sửa khách hàng:

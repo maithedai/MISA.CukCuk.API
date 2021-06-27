@@ -97,25 +97,11 @@
       "MISA.ApplicationCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "MISA.Entity": "1.0.0",
-          "MISA.Infrarstructure": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/MISA.ApplicationCore.dll": {}
         },
         "runtime": {
           "bin/placeholder/MISA.ApplicationCore.dll": {}
-        }
-      },
-      "MISA.Entity/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/MISA.Entity.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/MISA.Entity.dll": {}
         }
       },
       "MISA.Infrarstructure/1.0.0": {
@@ -123,7 +109,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Dapper": "2.0.90",
-          "MISA.Entity": "1.0.0",
+          "MISA.ApplicationCore": "1.0.0",
           "MySqlConnector": "1.3.10"
         },
         "compile": {
@@ -297,11 +283,6 @@
       "path": "../MISA.ApplicationCore/MISA.ApplicationCore.csproj",
       "msbuildProject": "../MISA.ApplicationCore/MISA.ApplicationCore.csproj"
     },
-    "MISA.Entity/1.0.0": {
-      "type": "project",
-      "path": "../MISA.Entity/MISA.Entity.csproj",
-      "msbuildProject": "../MISA.Entity/MISA.Entity.csproj"
-    },
     "MISA.Infrarstructure/1.0.0": {
       "type": "project",
       "path": "../MISA.Infrarstructure/MISA.Infrarstructure.csproj",
@@ -312,25 +293,30 @@
     "net5.0": [
       "Dapper >= 2.0.90",
       "MISA.ApplicationCore >= 1.0.0",
-      "MISA.Entity >= 1.0.0",
+      "MISA.Infrarstructure >= 1.0.0",
       "MySqlConnector >= 1.3.10",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mtdai\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
+      "projectUniqueName": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
       "projectName": "MISA_CukCuk_Test_API",
-      "projectPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
-      "packagesPath": "C:\\Users\\mtdai\\.nuget\\packages\\",
-      "outputPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\obj\\",
+      "projectPath": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA_CukCuk_Test_API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mtdai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -344,11 +330,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
-              "projectPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
+            "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+              "projectPath": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
             },
-            "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.Entity\\MISA.Entity.csproj": {
-              "projectPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.Entity\\MISA.Entity.csproj"
+            "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.Infrarstructure\\MISA.Infrarstructure.csproj": {
+              "projectPath": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.Infrarstructure\\MISA.Infrarstructure.csproj"
             }
           }
         }
@@ -394,7 +380,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

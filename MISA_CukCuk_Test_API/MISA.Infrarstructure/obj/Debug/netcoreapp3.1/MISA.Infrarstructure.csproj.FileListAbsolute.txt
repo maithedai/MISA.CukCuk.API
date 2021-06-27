@@ -10,3 +10,15 @@ E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\De
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Entity.dll
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Entity.pdb
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csproj.CopyComplete
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Infrarstructure.deps.json
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Infrarstructure.dll
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.Infrarstructure.pdb
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csprojAssemblyReference.cache
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.AssemblyInfoInputs.cache
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.AssemblyInfo.cs
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csproj.CoreCompileInputs.cache
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.csproj.CopyComplete
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.dll
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\obj\Debug\netcoreapp3.1\MISA.Infrarstructure.pdb
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Infrarstructure\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb

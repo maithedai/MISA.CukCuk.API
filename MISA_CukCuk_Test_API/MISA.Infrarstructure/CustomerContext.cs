@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using MISA.Infrarstructure.Models;
+using MISA.ApplicationCore.Entities;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace MISA.Infrarstructure
             //Khởi tạo commandText:
             var customers = dbConnection.Query<Customer>("Proc_GetCustomers", commandType: CommandType.StoredProcedure);
 
-            //Trả về dữ liệu:S
+            //Trả về dữ liệu:
             return customers;  
         }
 

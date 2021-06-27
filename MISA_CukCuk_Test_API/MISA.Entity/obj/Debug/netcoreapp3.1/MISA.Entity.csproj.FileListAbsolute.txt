@@ -7,3 +7,12 @@ E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netco
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.csproj.CoreCompileInputs.cache
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.dll
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.pdb
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\bin\Debug\netcoreapp3.1\MISA.Entity.deps.json
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\bin\Debug\netcoreapp3.1\MISA.Entity.dll
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\bin\Debug\netcoreapp3.1\MISA.Entity.pdb
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.csprojAssemblyReference.cache
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.AssemblyInfoInputs.cache
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.AssemblyInfo.cs
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.csproj.CoreCompileInputs.cache
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.dll
+H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA.Entity\obj\Debug\netcoreapp3.1\MISA.Entity.pdb
