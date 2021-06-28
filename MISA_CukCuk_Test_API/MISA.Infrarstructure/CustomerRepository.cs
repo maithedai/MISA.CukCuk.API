@@ -77,9 +77,6 @@ namespace MISA.Infrarstructure
         public int UpdateCustomer(Customer customer)
         {
             //Khởi tạo kết nối với db:
-            
-
-            //Xử lý các kiểu dữ liệu (mapping data)
             var parmaster = MappingDbType(customer);
 
             //Thực thi command Text
@@ -96,7 +93,12 @@ namespace MISA.Infrarstructure
 
         IEnumerable<Customer> ICustomerRepository.GetCustomers()
         {
-            return _dbConnection.Query<Customer>("Proc_GetCustomers", commandType: CommandType.StoredProcedure);
+            //Kết nối tới CSDL:
+            //Khởi tạo các commandType:
+            var customers = _dbConnection.Query<Customer>("Proc_GetCustomers", commandType: CommandType.StoredProcedure);
+            //Trả về dữ liệu
+            return customers;
+                
         }
 
         /// <summary>
