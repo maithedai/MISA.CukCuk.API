@@ -17,7 +17,12 @@ namespace MISA.ApplicationCore
             _customerRepository = customerRepository;
         }
 
-        public ServiceResult Addcustomer(Customer customer)
+        public ServiceResult UpdateCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ServiceResult AddCustomer(Customer customer)
         {
             throw new NotImplementedException();
         }
@@ -97,36 +102,6 @@ namespace MISA.ApplicationCore
             serviceResult.Messenger = "Thêm thành công";
             serviceResult.Data = rowAffects;
             return serviceResult;
-        }
-
-        public ServiceResult UpdateCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
-
-        ServiceResult ICustomerService.AddCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
-
-        ServiceResult ICustomerService.DeleteCustomer(Guid customerId)
-        {
-            throw new NotImplementedException();
-        }
-
-        Customer ICustomerService.GetCustomerById(Guid customerId)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<Customer> ICustomerService.GetCustomers()
-        {
-            throw new NotImplementedException();
-        }
-
-        ServiceResult ICustomerService.UpdateCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
         }
 
         //Sửa khách hàng:

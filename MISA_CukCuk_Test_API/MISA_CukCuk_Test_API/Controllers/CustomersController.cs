@@ -55,7 +55,7 @@ namespace MISA_CukCuk_Test_API.Controllers
             if (serviceResult.MISACode == MISACode.NotValid)
                 return BadRequest(serviceResult.Data);
             if (serviceResult.MISACode == MISACode.IsValid && (int)serviceResult.Data > 0)
-                return Created("Thành công", customer);
+                return Created("Thành công", serviceResult);
             else
                 return NoContent();
         }

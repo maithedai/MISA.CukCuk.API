@@ -61,10 +61,8 @@ E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\De
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.pdb
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.genruntimeconfig.cache
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\MISA.ApplicationCore.dll
-E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\MISA.Entity.dll
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\MISA.Infrarstructure.dll
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\MISA.ApplicationCore.pdb
-E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\MISA.Entity.pdb
 E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\MISA.Infrarstructure.pdb
 H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\appsettings.Development.json
 H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\appsettings.json
