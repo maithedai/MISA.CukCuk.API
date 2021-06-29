@@ -15,11 +15,15 @@ namespace MISA.ApplicationCore.Entities
         /// <summary>
         /// Khóa chính
         /// </summary>
+        /// 
+        [PrimaryKey]
         public Guid CustomerId { get; set; }
         
         /// <summary>
         /// Mã khách hàng
-        /// </summary>
+        /// </summary>        
+        [CheckDuplicate]
+        [Required]
         public string CustomerCode { get; set; }
 
         /// <summary>

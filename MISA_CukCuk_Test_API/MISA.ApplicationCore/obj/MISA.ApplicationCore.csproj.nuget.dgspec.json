@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {}
+    "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {}
   },
   "projects": {
-    "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+    "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
+        "projectUniqueName": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
         "projectName": "MISA.ApplicationCore",
-        "projectPath": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "H:\\Github\\GitHub\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\obj\\",
+        "projectPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\mtdai\\.nuget\\packages\\",
+        "outputPath": "E:\\mtdai\\github\\MISA.CukCuk.API\\MISA_CukCuk_Test_API\\MISA.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mtdai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

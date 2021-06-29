@@ -14,10 +14,10 @@ namespace MISA_CukCuk_Test_API.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class BaseEtityController<TEntity> : ControllerBase
+    public class BaseEntityController<TEntity> : ControllerBase
     {
         IBaseService<TEntity> _baseService;
-        public BaseEtityController(IBaseService<TEntity> baseService)
+        public BaseEntityController(IBaseService<TEntity> baseService)
         {
             _baseService = baseService;
         }
@@ -40,16 +40,13 @@ namespace MISA_CukCuk_Test_API.Controllers
 
         // POST api/<CustomerController>
         [HttpPost]
-        public IActionResult InsertCustomer(TEntity entity)
-        {
-            /// Validate dữ liệu:
-            /// check trống mã:
-
+        public IActionResult Post(TEntity entity)
+        {   
             var rowAffects = _baseService.Add(entity);
             return Ok(rowAffects);
         }
 
-        // PUT api/<CustomerController>/5
+        // PUT api/<CustomerController>/
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
         {
@@ -58,9 +55,10 @@ namespace MISA_CukCuk_Test_API.Controllers
 
         // DELETE api/<CustomerController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
-            return Ok();
+            var res = _baseService.Delete(id);
+            return Ok(res);
         }
     }
 }
