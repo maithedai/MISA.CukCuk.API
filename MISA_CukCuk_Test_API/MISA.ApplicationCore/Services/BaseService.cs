@@ -97,7 +97,7 @@ namespace MISA.ApplicationCore.Services
                 {
                     //check trùng dữ liệu
                     var propertyName = property.Name;
-                    var entityDuplicate = _baseRepository.GetEntityByProperty(property.Name, property.GetValue(entity));
+                    var entityDuplicate = _baseRepository.GetEntityByProperty(entity, property);
                     if(entityDuplicate != null)
                     {
                         isValidate = false;
