@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,22 +10,29 @@ namespace MISA.ApplicationCore.Entities
     /// Khách hàng
     /// </summary>
     /// CreateBy: MTDAI 25.06.2021
-    public class Customer
+    public class Customer:BaseEntity
     {
         #region Property
         /// <summary>
         /// Khóa chính
         /// </summary>
+        /// 
+        [PrimaryKey]
         public Guid CustomerId { get; set; }
         
         /// <summary>
         /// Mã khách hàng
-        /// </summary>
+        /// </summary>        
+        [CheckDuplicate]
+        [Required]
+        [DisplayName("Mã khách hàng")]
         public string CustomerCode { get; set; }
 
         /// <summary>
         /// Họ và tên
         /// </summary>
+        /// 
+        [DisplayName("Tên khách hàng")]
         public string FullName { get; set; }
 
         /// <summary>

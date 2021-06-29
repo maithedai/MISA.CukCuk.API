@@ -9,18 +9,13 @@ namespace MISA.ApplicationCore.Interfaces
     /// Interface danh mục khách hàng
     /// </summary>
     /// CreateBy: MTDAI 27.06.2021
-    public interface ICustomerRepository
+    public interface ICustomerRepository:IBaseRepository<Customer>
     {
         /// <summary>
-        /// Lấy danh sách khách hàng
+        /// Lấy thông tin khách hàng theo mã khách hàng
         /// </summary>
-        /// <returns>Danh sách khách hàng</returns>
-        /// CreateBy: MTDAI 27.06.2021
-        IEnumerable<Customer> GetCustomers();
-        Customer GetCustomerById(Guid customerId);
-        int AddCustomer(Customer customer);
-        int UpdateCustomer(Customer customer);
-        int DeleteCustomer(Guid customerId);
+        /// <param name="customerCode"></param>
+        /// <returns></returns>
         Customer GetCustomerByCode(string customerCode);
     }
 }

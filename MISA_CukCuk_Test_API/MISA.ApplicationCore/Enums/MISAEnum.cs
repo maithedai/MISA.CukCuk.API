@@ -22,4 +22,13 @@ namespace MISA.ApplicationCore.Enums
         /// </summary>
         Success = 200,    
     }
+    /// <summary>
+    /// Xác định trạng thái của object
+    /// </summary>
+    public enum EntityState
+    { 
+        AddNew = 1,
+        Update = 2,
+        Delete = 3, 
+    }
 }

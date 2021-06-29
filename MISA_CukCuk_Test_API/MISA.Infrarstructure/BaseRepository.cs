@@ -5,17 +5,19 @@ using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace MISA.Infrarstructure
 {
-    class BaseRepository<TEntity> : IBaseRepository<TEntity>
+    public class BaseRepository<TEntity> : IBaseRepository<TEntity>
     {
         #region DECLARE
         IConfiguration _configuration;
         string _connectionString = string.Empty;
-        IDbConnection _dbConnection = null;
-        string _tableName;
+        protected IDbConnection _dbConnection = null;
+        protected string _tableName;
         #endregion
 
         public BaseRepository(IConfiguration configuration)
@@ -88,5 +90,15 @@ namespace MISA.Infrarstructure
             }
             return parmaster;
         }
-    }
+
+        public TEntity GetEntityByProperty(TEntity entity, PropertyInfo property)
+        {
+            var propertyName = property.Name;
+            var propertyValue = property.GetValue(entity);
+            //if(entity.)
+            var query = $"SELECT * FROM {_tableName} WHERE {propertyName} = '{propertyValue}'";
+            //var entity = _dbConnection.Query<TEntity>(query,commandType: CommandType.Text).FirstOrDefault();
+            return entity;
+        }
+	}
 }

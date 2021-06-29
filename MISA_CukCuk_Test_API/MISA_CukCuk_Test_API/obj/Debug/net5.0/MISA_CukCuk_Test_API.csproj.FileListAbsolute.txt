@@ -99,3 +99,13 @@ H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\D
 H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\ref\MISA_CukCuk_Test_API.dll
 H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.pdb
 H:\Github\GitHub\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.genruntimeconfig.cache
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.csproj.AssemblyReference.cache
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.GeneratedMSBuildEditorConfig.editorconfig
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.AssemblyInfoInputs.cache
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.AssemblyInfo.cs
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.csproj.CoreCompileInputs.cache
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.MvcApplicationPartsAssemblyInfo.cs
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.MvcApplicationPartsAssemblyInfo.cache
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.dll
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\ref\MISA_CukCuk_Test_API.dll
+E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.pdb
