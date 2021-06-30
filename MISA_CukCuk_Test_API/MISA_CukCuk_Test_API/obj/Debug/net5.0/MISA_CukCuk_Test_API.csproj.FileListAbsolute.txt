@@ -109,3 +109,9 @@ E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MI
 E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.dll
 E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\ref\MISA_CukCuk_Test_API.dll
 E:\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\obj\Debug\net5.0\MISA_CukCuk_Test_API.pdb
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\EPPlus.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\System.Xml.XPath.XmlDocument.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\Microsoft.IO.RecyclableMemoryStream.dll
+E:\mtdai\github\MISA.CukCuk.API\MISA_CukCuk_Test_API\MISA_CukCuk_Test_API\bin\Debug\net5.0\System.IO.Pipelines.dll

@@ -1,13 +1,19 @@
-﻿using MISA.ApplicationCore.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using MISA.ApplicationCore.Entities;
 using MISA.ApplicationCore.Interfaces;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
+using System.IO;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace MISA.ApplicationCore.Services
 {
-    public abstract class BaseService<TEntity> : IBaseService<TEntity> where TEntity: BaseEntity
+    public class BaseService<TEntity> : IBaseService<TEntity> where TEntity: BaseEntity
     {
         IBaseRepository<TEntity> _baseRepository;
         ServiceResult _serviceResult;
@@ -60,7 +66,7 @@ namespace MISA.ApplicationCore.Services
             var isValidate = Validate(entity);
             if (isValidate == true)
             {
-                _serviceResult.Data = _baseRepository.Add(entity);
+                _serviceResult.Data = _baseRepository.Update(entity);
                 _serviceResult.MISACode = Enums.MISACode.IsValid;
                 return _serviceResult;
             }
@@ -69,6 +75,9 @@ namespace MISA.ApplicationCore.Services
                 return _serviceResult;
             }
         }
+
+
+
         private bool Validate(TEntity entity)
         {
             var mesArrayError = new List<string>();

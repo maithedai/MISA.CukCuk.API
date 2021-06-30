@@ -61,9 +61,16 @@ namespace MISA.Infrarstructure
             throw new NotImplementedException();
         }
 
-        public int Update(TEntity employee)
+        public int Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            //Khởi tạo kết nối với db:
+            var parmaster = MappingDbType(entity);
+
+            //Thực thi command Text
+            var rowAffects = _dbConnection.Execute($"Proc_Update{_tableName}", parmaster, commandType: CommandType.StoredProcedure);
+
+            //Trả về số bản ghi thêm mới đc
+            return rowAffects;
         }
 
         /// <summary>
@@ -84,6 +91,11 @@ namespace MISA.Infrarstructure
                 if (propertyType == typeof(Guid) || propertyType == typeof(Guid?))
                 {
                     parmaster.Add($"{propertyName}", propertyValue, DbType.String);
+                }
+                else if (propertyType == typeof(bool) || propertyType == typeof(bool?))
+                {
+                    var dbValue = ((bool)propertyValue == true ? 1: 0);
+                    parmaster.Add($"@{propertyName}", dbValue, DbType.Int32);
                 }
                 else
                 {

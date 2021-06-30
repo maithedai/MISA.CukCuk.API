@@ -12,7 +12,7 @@ namespace MISA.ApplicationCore.Entities
     /// CreateBy: MTDAI 25.06.2021
     public class Customer:BaseEntity
     {
-        #region Property
+         #region Property
         /// <summary>
         /// Khóa chính
         /// </summary>
@@ -61,28 +61,13 @@ namespace MISA.ApplicationCore.Entities
         public string Email { get; set; }
 
         /// <summary>
-        /// Ngày tạo
-        /// </summary>
-        public DateTime? CreatedDate { get; set; }
-
-        /// <summary>
-        /// Người tạo
-        /// </summary>
-        public string CreatedBy { get; set; }
-
-        /// <summary>
-        /// Ngày sửa đổi
-        /// </summary>
-        public DateTime? ModifiedDate { get; set; }
-
-        /// <summary>
         /// Nhóm khách hàng
         /// </summary>
         public Guid? CustomerGroupId { get; set; }
 
         public string MemberCardCode { get; set; }
 
-        public string Node { get; set; }
+        public string Note { get; set; }
 
         public string CompanyName { get; set; }
 
