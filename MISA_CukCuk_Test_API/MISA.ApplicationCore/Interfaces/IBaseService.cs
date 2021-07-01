@@ -1,7 +1,9 @@
-﻿using MISA.ApplicationCore.Entities;
+﻿using Microsoft.AspNetCore.Http;
+using MISA.ApplicationCore.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace MISA.ApplicationCore.Interfaces
 {
@@ -16,5 +18,6 @@ namespace MISA.ApplicationCore.Interfaces
         ServiceResult Add(TEntity entity);
         ServiceResult Update(TEntity entity);
         ServiceResult Delete(Guid entityId);
+        ServiceResult Import(IFormFile formFile, CancellationToken cancellationToken);
     }
 }

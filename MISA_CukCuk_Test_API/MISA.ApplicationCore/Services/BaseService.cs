@@ -60,6 +60,15 @@ namespace MISA.ApplicationCore.Services
             return _baseRepository.GetEntityById(entityId);
         }
 
+        public virtual ServiceResult Import(IFormFile formFile, CancellationToken cancellationToken)
+        {
+            ServiceResult serviceResult = new ServiceResult();
+            serviceResult.MISACode = Enums.MISACode.IsValid;
+            serviceResult.Messenger = "Thêm dữ liệu thành công";
+
+            return serviceResult;
+        }
+
         public ServiceResult Update(TEntity entity)
         {
             entity.EntityState = Enums.EntityState.Update;
@@ -78,7 +87,7 @@ namespace MISA.ApplicationCore.Services
 
 
 
-        private bool Validate(TEntity entity)
+        public bool Validate(TEntity entity)
         {
             var mesArrayError = new List<string>();
             var isValidate = true;

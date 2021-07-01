@@ -114,7 +114,7 @@ namespace MISA.Infrarstructure
             if (entity.EntityState == EntityState.AddNew)
                 query = $"SELECT * FROM {_tableName} WHERE {propertyName} = '{propertyValue}'";
             else if (entity.EntityState == EntityState.Update)
-                query = $"SELECT * FROM {_tableName} WHERE {propertyName} = '{propertyValue}' AND {_tableName}Id <> {_tableName}";
+                query = $"SELECT * FROM {_tableName} WHERE {propertyName} = '{propertyValue}' AND {_tableName}Id <> '{keyValue}'";
             else
                 return null;
             var entityReturn = _dbConnection.Query<TEntity>(query,commandType: CommandType.Text).FirstOrDefault();

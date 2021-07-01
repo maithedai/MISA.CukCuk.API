@@ -23,9 +23,19 @@ namespace MISA_CukCuk_Test_API.Controllers
     public class CustomersController : BaseEntityController<Customer>
     {
         IBaseService<Customer> _baseService;
-        public CustomersController(IBaseService<Customer> baseService) : base(baseService)
+        ICustomerService _customerService;
+        public CustomersController(IBaseService<Customer> baseService, ICustomerService customerService) : base(baseService)
         {
             _baseService = baseService;
+            _customerService = customerService;
         }     
+
+        [HttpPost("Import")]
+        public ServiceResult Import(IFormFile formFile, CancellationToken cancellationToken)
+        {
+            ServiceResult serviceResult = new ServiceResult();
+            serviceResult.Data =  _customerService.Import(formFile, cancellationToken);
+            return serviceResult;
+        }
     }
 }
