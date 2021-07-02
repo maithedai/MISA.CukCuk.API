@@ -20,6 +20,16 @@ namespace MISA.ApplicationCore.Entities
     {
 
     }
+
+    [AttributeUsage(AttributeTargets.Property)]
+    public class ColumnName : Attribute
+    {
+        public string excelName { get; set; }
+        public ColumnName(string name)
+        {
+            excelName = name;
+        }
+    }
     public class BaseEntity
     {
         public EntityState EntityState { get; set; } = EntityState.AddNew;

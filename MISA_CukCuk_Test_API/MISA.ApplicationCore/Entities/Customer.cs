@@ -19,58 +19,27 @@ namespace MISA.ApplicationCore.Entities
         /// 
         [PrimaryKey]
         public Guid CustomerId { get; set; }
-        
-        /// <summary>
-        /// Mã khách hàng
-        /// </summary>        
-        [CheckDuplicate]
-        [Required]
-        [DisplayName("Mã khách hàng")]
+        [ColumnName("Mã khách hàng (*)")]
+
         public string CustomerCode { get; set; }
-
-        /// <summary>
-        /// Họ và tên
-        /// </summary>
-        /// 
-        [DisplayName("Tên khách hàng")]
+        [ColumnName("Tên khách hàng (*)")]
         public string FullName { get; set; }
-
-        /// <summary>
-        /// Ngày sinh
-        /// </summary>
+        [ColumnName("Ngày sinh")]
         public DateTime? DateOfBirth { get; set; }
-
-        /// <summary>
-        /// Địa chỉ
-        /// </summary>
-        public string Aderss { get; set; }
-
-        /// <summary>
-        /// Số điện thoại
-        /// </summary>
+        [ColumnName("Địa chỉ")]
+        public string Adress { get; set; }
+        [ColumnName("Số điện thoại")]
         public string PhoneNumber { get; set; }
-
-        /// <summary>
-        /// Giới tính
-        /// </summary>
-        public int? Gender { get; set; }      
-
-        /// <summary>
-        /// Địa chỉ Email
-        /// </summary>
+        public int? Gender { get; set; }
+        [ColumnName("Email")]
         public string Email { get; set; }
-
-        /// <summary>
-        /// Nhóm khách hàng
-        /// </summary>
         public Guid? CustomerGroupId { get; set; }
-
         public string MemberCardCode { get; set; }
-
+        [ColumnName("Ghi chú")]
         public string Note { get; set; }
-
+        [ColumnName("Tên công ty")]
         public string CompanyName { get; set; }
-
+        [ColumnName("Mã số thuế")]
         public string CompanyTaxCode { get; set; }
 
         #endregion

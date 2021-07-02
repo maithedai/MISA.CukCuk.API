@@ -62,11 +62,77 @@ namespace MISA.ApplicationCore.Services
 
         public virtual ServiceResult Import(IFormFile formFile, CancellationToken cancellationToken)
         {
-            ServiceResult serviceResult = new ServiceResult();
-            serviceResult.MISACode = Enums.MISACode.IsValid;
-            serviceResult.Messenger = "Thêm dữ liệu thành công";
-
-            return serviceResult;
+            if (formFile == null || formFile.Length <= 0)
+            {
+                return ServiceResult.GetResult(Enums.MISACode.NotValid, "");
+            }
+            if (!Path.GetExtension(formFile.FileName).Equals(".xlsx", StringComparison.OrdinalIgnoreCase))
+            {
+                return ServiceResult.GetResult(Enums.MISACode.NotValid, "");
+            }
+            var list = new List<TEntity>();
+            using (var stream = new MemoryStream())
+            {
+                formFile.CopyToAsync(stream, cancellationToken);
+                using (var package = new ExcelPackage(stream))
+                {
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    var rowCount = worksheet.Dimension.Rows;
+                    var colCount = worksheet.Dimension.Columns;
+                    for (int row = 3; row <= rowCount; row++)
+                    {
+                        var entity = (TEntity)Activator.CreateInstance(typeof(TEntity), new object[] { });
+                        this.BuildObject(worksheet, row, colCount, ref entity);
+                        list.Add(entity);
+                    }
+                }
+            }
+            ServiceResult result = new ServiceResult();
+            result.Data = list;
+            return result;
+        }
+        private void BuildObject(ExcelWorksheet worksheet, int row, int total_col, ref TEntity entity)
+        {
+            //Duyệt các cột trong file excel
+            for (int col = 1; col <= total_col; ++col)
+            {
+                //Check validate trong tệp
+                //Map dữ liệu trong excel với entity
+                var cellValue = worksheet.Cells[row, col].Value;
+                var colName = worksheet.Cells[2, col].Value;
+                this.MapExcelToEntity(ref cellValue, ref entity, colName.ToString());
+            }
+        }
+        /// <summary>
+        /// Map dữ liệu từ excel với entity
+        /// tdanh 6.21
+        /// </summary>
+        /// <param name="cellValue"></param>
+        /// <param name="entity"></param>
+        /// <param name="colName"></param>
+        private void MapExcelToEntity(ref object cellValue, ref TEntity entity, string colName)
+        {
+            var properties = entity.GetType().GetProperties();
+            foreach (var property in properties)
+            {
+                //Kiểm tra xem property đó có attribute ExcelName ko
+                if (property.IsDefined(typeof(ColumnName), false))
+                {
+                    var attribute = property.GetCustomAttributes(typeof(ColumnName), true)[0];
+                    var excelName = (attribute as ColumnName).excelName;
+                    if (colName == excelName.ToString() && cellValue != null)
+                    {
+                        if (property.PropertyType == typeof(DateTime?))
+                        {
+                            property.SetValue(entity, DateTime.ParseExact(cellValue.ToString(), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture));
+                        }
+                        else
+                        {
+                            property.SetValue(entity, cellValue.ToString());
+                        }
+                    }
+                }
+            }
         }
 
         public ServiceResult Update(TEntity entity)
